@@ -3,8 +3,10 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 5vmin;
   pointer-events: none;
+  margin-left: 25px;
+  margin-top: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,18 +39,49 @@
   }
 }
 
-/* font converted using font-converter.net. thank you!
-@font-face {
-  font-family: "Splatish";
-  src: url("../fonts/Splatish-P5vP.woff2") format("woff2"); /* Modern Browsers
-  font-weight: normal;
-  font-style: normal;
+.board {
+  display: flex;
+  flex-direction: column;
 }
-*/
-.textLoading {
-  font-family: 'Splatish';
-  font-size: 40px;
-  display: inline-block;
-  padding: 10px;
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  width: 45px;
+  height:45px;
+  font-size: 15px;
+  margin: 5px;
+  background: grey;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+}
+
+.Header h2 {
+  margin: 20px;
+}
+
+.control {
+  display: flex;
+  flex-direction: row;
+}
+
+.control div {
+  margin: 30px 120px;
+}
+
+.reset {
+  background-color: transparent;
   color: white;
+  text-align: end;
+  text-decoration: none;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+  border-width: 0px;
 }
