@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-shadow: 10px 10px 5px darkred;
 }
 
 .App-logo {
@@ -62,8 +63,18 @@
   flex-direction: row;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 .Header h2 {
   margin: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.timer {
+  font-family: 'Raleway', sans-serif;
+}
+
+.counter {
+  font-family: 'Raleway', sans-serif;
 }
 
 .control {
