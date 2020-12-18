@@ -1,0 +1,10 @@
+.reset {
+  background-color: transparent;
+  color: white;
+  text-align: end;
+  text-decoration: none;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+  border-width: 0px;
+}
