@@ -11,9 +11,9 @@ class Row extends React.Component {
         row={this.props.number}
         col={num}
         coords={this.props.number.toString() + num.toString()}
-        isOpen={false}
-        isMined={false}
-        isFlagged={false}
+        isOpen={this.props.state.isOpen}
+        isMined={this.props.isMined}
+        isFlagged={this.props.isFlagged}
       />
     ));
     return <div className="row">{cells}</div>;
