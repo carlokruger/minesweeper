@@ -6,7 +6,7 @@ class Row extends React.Component {
   render() {
     const cells = [0, 1, 2, 3, 4, 5, 6, 7].map((num) => (
       <Cell
-        key={"cell" + (num + this.props.number * 8).toString()}
+        key={num + this.props.number * 8}
         value={num + this.props.number * 8}
         row={this.props.number}
         col={num}
