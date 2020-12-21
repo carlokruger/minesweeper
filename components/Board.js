@@ -20,6 +20,8 @@ class Board extends React.Component {
       this.state[cell] = {
         row: row,
         col: col,
+        coord: row.toString() + col.toString(),
+        cellNum: row * 8 + col,
         isMined: false,
         isFlagged: false,
         isOpen: false,
