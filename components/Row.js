@@ -4,19 +4,15 @@ import "./css/Row.css";
 
 class Row extends React.Component {
   render() {
-    const cells = [0, 1, 2, 3, 4, 5, 6, 7].map((num) => (
+    return Object.keys(this.props.state.cells).map((key) => (
       <Cell
-        key={num + this.props.number * 8}
-        value={num + this.props.number * 8}
-        row={this.props.number}
-        col={num}
-        coords={this.props.number.toString() + num.toString()}
-        isOpen={this.props.state.isOpen}
-        isMined={this.props.isMined}
-        isFlagged={this.props.isFlagged}
+        key={key}
+        index={key}
+        isOpen={this.props.state.cells[key].isOpen}
+        isMined={this.props.state.cells[key].isMined}
+        isFlagged={this.props.state.cells[key].isFlagged}
       />
     ));
-    return <div className="row">{cells}</div>;
   }
 }
 
