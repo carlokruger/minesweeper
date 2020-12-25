@@ -4,6 +4,7 @@
   font-size: 15px;
   margin: 5px;
   background: grey;
+  border: 1px solid white;
 }
 .closed {
   background: grey;
@@ -12,11 +13,5 @@
   background: white;
 }
 .mined {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(https://stepik.org/media/attachments/lesson/360753/target.svg)
-    no-repeat;
-  width: 45px;
-  height: 45px;
+  background: goldenrod;
 }

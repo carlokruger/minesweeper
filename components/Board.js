@@ -29,10 +29,14 @@ class Board extends React.Component {
     this.initState();
   }
   render() {
-    const rows = [0, 1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-      <Row key={num} number={num} state={this.state} />
-    ));
-    return <div className="board">{rows}</div>;
+    /* const rows = [0, 1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+      
+    )); */
+    return (
+      <div className="board">
+        <Row state={this.state} />
+      </div>
+    );
   }
 }
 
