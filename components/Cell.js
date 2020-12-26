@@ -22,12 +22,16 @@ class Cell extends React.Component {
           height="45px"
         />
       );
+    } else if (!this.props.isOpen && this.props.isMined) {
+      cellClass = "cell closed";
+      cellContents = "";
     } else if (
       this.props.isOpen &&
       !this.props.isFlagged &&
       !this.props.isMined
     ) {
       cellClass = "cell open";
+      cellContents = "";
     }
 
     return (
