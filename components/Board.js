@@ -21,17 +21,21 @@ class Board extends React.Component {
       };
     }
     //console.log(cells);
-    /* for (let mines = 0; (mines = 10); mines++) {
+    let mines;
+    for (mines = 0; mines < 11; mines++) {
       let mined = Math.floor(Math.random() * Math.floor(72));
       console.log("finding a mine");
-      //console.log(mined);
+      console.log(mined);
       //console.log(cells);
 
       if (!cells[mined].isMined) {
         cells[mined].isMined = true;
-        console.log(mined);
+        //console.log(mined);
+      } else if (cells[mined].isMined) {
+        console.log("skipped");
+        continue;
       }
-    } */
+    }
 
     this.setState({ cells });
     console.log("set state");
