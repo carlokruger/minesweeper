@@ -13,5 +13,8 @@
   background: white;
 }
 .mined {
+  background: red;
+}
+.flagged {
   background: goldenrod;
 }

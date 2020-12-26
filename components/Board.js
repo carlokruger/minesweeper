@@ -8,7 +8,6 @@ class Board extends React.Component {
     this.state = {
       cells: {},
     };
-    // this.initState();
   }
 
   initState = () => {
@@ -21,17 +20,46 @@ class Board extends React.Component {
         isOpen: false,
       };
     }
+    //console.log(cells);
+    /* for (let mines = 0; (mines = 10); mines++) {
+      let mined = Math.floor(Math.random() * Math.floor(72));
+      console.log("finding a mine");
+      //console.log(mined);
+      //console.log(cells);
+
+      if (!cells[mined].isMined) {
+        cells[mined].isMined = true;
+        console.log(mined);
+      }
+    } */
 
     this.setState({ cells });
+    console.log("set state");
+  };
+
+  initMines = () => {
+    let cells = { ...this.state.cells };
+    console.log(cells);
+    for (let mines = 0; (mines = 10); mines++) {
+      let mined = Math.floor(Math.random() * Math.floor(72));
+      console.log("finding a mine");
+      console.log(mined);
+      console.log(cells[mined]);
+
+      if (cells[mined].isMined) {
+        break;
+      } else {
+        cells[mined].isMined = true;
+        //console.log(mined);
+      }
+    }
   };
 
   componentDidMount() {
     this.initState();
+    // this.initMines();
   }
   render() {
-    /* const rows = [0, 1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-      
-    )); */
     return (
       <div className="board">
         <Row state={this.state} />
