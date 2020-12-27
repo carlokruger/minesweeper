@@ -20,17 +20,14 @@ class Board extends React.Component {
         isOpen: false,
       };
     }
-    //console.log(cells);
     let mines;
     for (mines = 0; mines < 11; mines++) {
       let mined = Math.floor(Math.random() * Math.floor(72));
       console.log("finding a mine");
       console.log(mined);
-      //console.log(cells);
 
       if (!cells[mined].isMined) {
         cells[mined].isMined = true;
-        //console.log(mined);
       } else if (cells[mined].isMined) {
         console.log("skipped");
         continue;
@@ -41,27 +38,8 @@ class Board extends React.Component {
     console.log("set state");
   };
 
-  initMines = () => {
-    let cells = { ...this.state.cells };
-    console.log(cells);
-    for (let mines = 0; (mines = 10); mines++) {
-      let mined = Math.floor(Math.random() * Math.floor(72));
-      console.log("finding a mine");
-      console.log(mined);
-      console.log(cells[mined]);
-
-      if (cells[mined].isMined) {
-        break;
-      } else {
-        cells[mined].isMined = true;
-        //console.log(mined);
-      }
-    }
-  };
-
   componentDidMount() {
     this.initState();
-    // this.initMines();
   }
   render() {
     return (
