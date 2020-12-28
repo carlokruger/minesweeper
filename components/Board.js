@@ -10,7 +10,7 @@ class Board extends React.Component {
   render() {
     return (
       <div className="board">
-        <Row state={this.props.state} />
+        <Row state={this.props.state} openCell={this.props.openCell} />
       </div>
     );
   }

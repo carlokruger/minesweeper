@@ -37,7 +37,7 @@ class Cell extends React.Component {
     return (
       <div
         className={cellClass}
-        onClick={() => console.log(this.props.coords)}
+        onClick={() => this.props.openCell(this.props.index)}
         onContextMenu={() => console.log("Right clicked")}
       >
         {cellContents}

@@ -44,6 +44,12 @@ class App extends React.Component {
     this.initState();
   }
 
+  openCell = (key) => {
+    let cells = { ...this.state.cells };
+    cells[key].isOpen = true;
+    this.setState({ cells });
+  };
+
   render() {
     return (
       <div className="App">
@@ -55,7 +61,7 @@ class App extends React.Component {
             </h2>
           </div>
           <ControlPanel />
-          <Board state={this.state} />
+          <Board state={this.state} openCell={this.openCell} />
         </header>
       </div>
     );
