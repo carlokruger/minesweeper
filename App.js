@@ -50,6 +50,13 @@ class App extends React.Component {
     this.setState({ cells });
   };
 
+  flagCell = (event, key) => {
+    event.preventDefault();
+    let cells = { ...this.state.cells };
+    cells[key].isFlagged = true;
+    this.setState({ cells });
+  };
+
   render() {
     return (
       <div className="App">
@@ -61,7 +68,11 @@ class App extends React.Component {
             </h2>
           </div>
           <ControlPanel />
-          <Board state={this.state} openCell={this.openCell} />
+          <Board
+            state={this.state}
+            flagCell={this.flagCell}
+            openCell={this.openCell}
+          />
         </header>
       </div>
     );

@@ -38,7 +38,7 @@ class Cell extends React.Component {
       <div
         className={cellClass}
         onClick={() => this.props.openCell(this.props.index)}
-        onContextMenu={() => console.log("Right clicked")}
+        onContextMenu={(event) => this.props.flagCell(event, this.props.index)}
       >
         {cellContents}
       </div>

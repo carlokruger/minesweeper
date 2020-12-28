@@ -12,6 +12,7 @@ class Row extends React.Component {
         isMined={this.props.state.cells[key].isMined}
         isFlagged={this.props.state.cells[key].isFlagged}
         openCell={this.props.openCell}
+        flagCell={this.props.flagCell}
       />
     ));
   }
