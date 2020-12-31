@@ -23,13 +23,15 @@ class App extends React.Component {
       };
     }
     let mines;
-    for (mines = 0; mines < 11; mines++) {
+    let setMines = 0;
+    while (setMines < 10) {
       let mined = Math.floor(Math.random() * Math.floor(72));
       console.log("finding a mine");
       console.log(mined);
 
       if (!cells[mined].isMined) {
         cells[mined].isMined = true;
+        setMines += 1;
       } else if (cells[mined].isMined) {
         console.log("skipped");
         continue;
@@ -37,7 +39,7 @@ class App extends React.Component {
     }
 
     this.setState({ cells });
-    console.log("set state");
+    console.log(setMines);
   };
 
   componentDidMount() {
